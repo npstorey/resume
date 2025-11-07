@@ -1,0 +1,16 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nathan Storey resume using JSON Resume schema, built to HTML/PDF and published via GitHub Pages.",
+  "scripts": {
+    "dev": "resume serve --theme paper --resume src/resume.json",
+    "build:html": "mkdir -p docs && resume export docs/index.html --theme paper --resume src/resume.json",
+    "build:pdf": "mkdir -p docs && resume export docs/Nathan_Storey_Resume.pdf --format pdf --theme paper --resume src/resume.json",
+    "build": "npm run build:html && npm run build:pdf"
+  },
+  "dependencies": {
+    "resume-cli": "^3.0.0",
+    "jsonresume-theme-paper": "^2.0.0"
+  }
+}
