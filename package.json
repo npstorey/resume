@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "resume-cli": "^3.0.0",
-    "jsonresume-theme-paper": "^2.0.0"
+    "jsonresume-theme-paper": "^0.5.0"
   }
 }
