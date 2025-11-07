@@ -1,0 +1,203 @@
+{
+  "basics": {
+    "name": "Nathan Storey",
+    "label": "Director of Data Governance \u2022 Civic Technologist",
+    "email": "",
+    "phone": "",
+    "url": "https://nathanstorey.com",
+    "location": {
+      "city": "Brooklyn",
+      "region": "NY",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "nathanpstorey",
+        "url": "https://www.linkedin.com/in/nathanpstorey"
+      },
+      {
+        "network": "GitHub",
+        "username": "npstorey",
+        "url": "https://github.com/npstorey"
+      }
+    ],
+    "summary": "Civic technologist and data-governance leader in NYC government with a track record of turning policy goals into delivery: open data, standards, and user\u2011centered digital services. Led the NYC\u2011GO governance dataset adopted for the Agency Directory on NYC.gov and MetaCat, a citywide metadata/catalog effort aligned to DCAT\u2011US. Previously built delivery teams and products in homelessness services (HOME\u2011STAT dashboards; StreetSmart)."
+  },
+  "work": [
+    {
+      "name": "NYC Office of Technology & Innovation (OTI) \u2014 Office of Data & Analytics (ODA)",
+      "position": "Director of Data Governance",
+      "location": "New York, NY",
+      "startDate": "2024",
+      "summary": "Lead citywide data governance initiatives, standards, and open data/catalog modernization.",
+      "highlights": [
+        "Published the NYC Agencies & Governance Organizations (NYC\u2011GO) dataset powering the Agency Directory on NYC.gov.",
+        "Lead MetaCat: defined asset types/fields aligned to DCAT\u2011US; drafted contribution workflows for citywide adoption.",
+        "Co\u2011steward NYC Open Data policy, quality, and release pipelines; advanced documentation and standards adoption.",
+        "Prototyped GitHub\u2011first docs and the NYC Open Data MCP to accelerate documentation and developer workflows.",
+        "Co\u2011led the Data Asset Working Group (DAWG); authored citywide guidance and strategy artifacts."
+      ]
+    },
+    {
+      "name": "NYC Department of Homeless Services (DHS)",
+      "position": "Executive Director of Data & Analytics; Founding Director, Street Homeless Solutions Lab",
+      "location": "New York, NY",
+      "startDate": "2018",
+      "endDate": "2023",
+      "summary": "Built delivery\u2011oriented analytics/product capacity for street homelessness services.",
+      "highlights": [
+        "Established a product & service design team; secured funding and executive sponsorship.",
+        "Implemented policy co\u2011creation (ORID) across hundreds of stakeholders to standardize practice.",
+        "Built the agency\u2019s first unified client list to streamline reporting and enable usage\u2011pattern research.",
+        "Audited reporting and delivered prioritized improvements adopted by DHS leadership."
+      ]
+    },
+    {
+      "name": "NYC Mayor\u2019s Office of Operations",
+      "position": "Senior Project Specialist",
+      "location": "New York, NY",
+      "startDate": "2016",
+      "endDate": "2018",
+      "summary": "Product lead for StreetSmart and public HOME\u2011STAT dashboards.",
+      "highlights": [
+        "Embedded user\u2011centered design and a dedicated product manager role into DHS IT for the first time.",
+        "Launched public HOME\u2011STAT dashboards and standardized cross\u2011provider KPIs with multiple agencies."
+      ]
+    },
+    {
+      "name": "IDNYC (NYC HRA)",
+      "position": "Data Analyst",
+      "location": "New York, NY",
+      "startDate": "2015",
+      "endDate": "2016",
+      "highlights": [
+        "Designed executive reporting for HRA, the Mayor\u2019s Office, and City Council; consolidated indicators across systems."
+      ]
+    },
+    {
+      "name": "Ontodia",
+      "position": "Product Manager",
+      "location": "New York, NY",
+      "startDate": "2013",
+      "endDate": "2014",
+      "highlights": [
+        "Designed UX for NYCpedia and CivicDashboards; developed geospatial databases from multiple sources."
+      ]
+    },
+    {
+      "name": "Arrow Root Media",
+      "position": "Project Manager",
+      "location": "New York, NY",
+      "startDate": "2011",
+      "endDate": "2013"
+    },
+    {
+      "name": "City Atlas",
+      "position": "Project Manager",
+      "location": "New York, NY",
+      "startDate": "2011",
+      "endDate": "2011"
+    },
+    {
+      "name": "ioby",
+      "position": "Digital Media Fellow",
+      "location": "New York, NY",
+      "startDate": "2009",
+      "endDate": "2010",
+      "highlights": [
+        "Built digital storytelling and social strategy; secured a $25,000 grant."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Hunter College (CUNY)",
+      "area": "Urban Planning",
+      "studyType": "M.U.P.",
+      "endDate": "2013-05",
+      "courses": [
+        "Student government representative",
+        "Peer reviewer, Urban Review",
+        "Hunter Sustainability Council"
+      ]
+    },
+    {
+      "institution": "Wayne State University",
+      "area": "Media Arts & Studies",
+      "studyType": "B.A.",
+      "endDate": "2006-06"
+    },
+    {
+      "institution": "NYU Tisch School of the Arts",
+      "area": "Film & TV coursework",
+      "studyType": "Non\u2011degree"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Subject Matter Expertise",
+      "keywords": [
+        "Technology",
+        "Operations",
+        "Social Services",
+        "Housing",
+        "Economic Development"
+      ]
+    },
+    {
+      "name": "Other Expertise",
+      "keywords": [
+        "Open Data & Data Governance",
+        "Metadata Catalogs (DCAT/DCAT\u2011US)",
+        "Cross\u2011agency Analytics & Data Integration",
+        "Procurement & Contracting Transparency (OCDS/PASSPort)",
+        "AI governance & adoption"
+      ]
+    },
+    {
+      "name": "Skills",
+      "keywords": [
+        "Program & Project Management",
+        "Technology & Data",
+        "Policy & Analysis",
+        "Operations & Administration",
+        "Community & Stakeholder Engagement",
+        "Communications & Digital"
+      ]
+    },
+    {
+      "name": "Tools & Methods",
+      "keywords": [
+        "Python",
+        "SQL",
+        "Socrata/SODA",
+        "QGIS/ArcGIS",
+        "Git/GitHub",
+        "Jupyter/CSV/JSON ETL",
+        "HTML/CSS/JS",
+        "Airtable",
+        "Product Discovery/Delivery",
+        "ORID facilitation"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "NYC Agencies & Governance Organizations (NYC\u2011GO) dataset",
+      "summary": "Standardized governance dataset powering the Agency Directory on NYC.gov."
+    },
+    {
+      "name": "MetaCat",
+      "summary": "Citywide metadata/catalog initiative aligned to DCAT\u2011US."
+    },
+    {
+      "name": "StreetSmart",
+      "summary": "Product for outreach operations with UCD and product management embedded at DHS."
+    },
+    {
+      "name": "HOME\u2011STAT Dashboards",
+      "summary": "Public dashboards and standardized KPIs across outreach providers."
+    }
+  ]
+}
