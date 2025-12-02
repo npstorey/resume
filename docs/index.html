@@ -1,731 +1,644 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-  <title>Nathan Storey</title>
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-  <style>body, html {
-  padding-top:2.5em;
-  margin:0;
-  background-color:#fafafa;
-}
+	<head>
 
-.note {
-  display:block;
-  position: absolute;
-  top:10px;
-  left:10px;
-
-  font-family: "Open Sans";
-  font-size: 0.6em;
-}
-
-.new {
-  background-color: #81C784;
-
-  border: 1px solid #757575;
-  padding: 1px;
-  border-radius: 4px;
-
-}
-
-/* Header */
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
 
-header {
-  width:100%;
-  vertical-align: middle;
-  text-align: center;
- 
-}
+	<title>Nathan Storey</title>
 
-.header-content {
-  display: inline-block;
+	<style>
+	body {
+	background: #fff;
+	font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+	font-feature-settings: "liga" 0, "clig" 0;
+	font-variant-ligatures: none;
+	line-height: 1.4;
+	margin: 0;
 }
-
-.pic {
-  margin: 0 auto;
-  margin-top:-2.5em;
-  
-  border-radius:10em;
-  height:4em;
-  width:4em;
-  
-  border: 2px solid #e0e0e0;
-  transition : all 0.5s linear;
-  
+em {
+	color: #999;
 }
-
-@-webkit-keyframes wiggle {
-  0%   {
-    transform: rotate(0deg);
-  }
-  25%  {
-    transform: rotate(-30deg);
-  }
-  50%  {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+p {
+	line-height: 1.6;
+	font-size: 90%;
 }
 
-.pic:hover {
-  /*Webkit fix*/
-  -webkit-transform: translateZ(0);
-  
-  cursor:pointer;
-  
-  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+a {
+	color: #2C85B1;
+	text-decoration: none;
+	font-weight: 400;
 }
-
-.header-text {
-  margin-top:0.5em;
-  margin-left:1em;
+ul {
+	margin-bottom: 0;
 }
-
-header p {
-  text-align:center;
-  font-family: "Merriweather";
-  
-  margin:0;
-  
-  color: #212121;
+section {
+	margin: 1em 0 2em;
 }
-
-.first-name {
-   font-size: 1.05em;
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
 }
-
-.subtitle {
-  font-family: "Merriweather";
-  padding-top:.3em;
-  font-size:0.55em;
-  font-weight:500;
-  color: #424242;
+#resume {
+	margin: 2em 2em 2em 2.5em;
+	max-width: 760px;
 }
 
-/* Information */
+/* Resume heading */
+.heading header {
 
-.paper {
-  margin: 0 auto;
-  margin-bottom:1em;
-  
-  background-color:white;
-  width:60%;
-  
-  padding:0.5em 0 0.5em 0;
-  
-  border-top: 1px solid #e0e0e0;
-  border-left: 1px solid #e0e0e0;
-  border-right: 1px solid #e0e0e0;
-  border-bottom: 3px solid #e0e0e0;
-  border-radius:3px;
 }
 
-@media(max-width:992px) {
-  .paper {
-    width:80%;
-  }
+.heading header h1 {
+	font-size: 180%;
+	margin: 0.2em 0 0.1em;
+	font-weight: 600;
 }
-
-/* Content Part */
 
-.content-wrapper {
-  padding-right:7.25%;
+.heading header h2.label {
+	font-size: 110%;
+	margin: 0 0 0.5em;
+	font-weight: 400;
+	color: #555;
 }
 
-.content {
-  display:table;
-  width:100%;
-  
-  padding-top:1.5em;
-  
-  /*border-top: 1px solid #eeeeee;*/
+.heading header .contact {
+	margin-bottom: 0.5em;
 }
 
-.content:last-child {
-  margin-bottom: 2em;
+.heading header .contact .detail {
+	margin: 0 1em 0 0;
+	font-size: 90%;
 }
 
-body > div > article > div > section:last-child {
-  padding-bottom:1.5em;
+.heading header .contact .location {
+	color: #333;
 }
 
-.row {
-    display:table-row;
+.heading .summary {
+	margin: 0.5em 0;
 }
-.row div {
-    display:table-cell;
-}
-
-.content-cat {
-  font-family: "Merriweather";
-  font-variant:small-caps;
-  font-weight:300;
-  letter-spacing: 1px;
-  
-  color: #212121;
-  
-  font-size:0.975em;
-  
-  text-align:center;
-  vertical-align:middle;
 
-  padding-left:6.66%;
-  width:30%;
+.profile {
+	display: inline-block;
+	margin: 0 1em 0 0;
 }
 
-.content-cat p {
-  font-size:0.55em;
-  font-weight:600;
-  
-  margin-bottom:0;
+.profile strong,
+.profile span {
+	display: inline-block;
+	margin: 0 1em 0 0;
 }
-
-.content-text {
-  border-left:1px solid #e0e0e0;
-  transition: border 0.66s ease-in;
+/* section / line breaks */
+section h2 {
+	font-size: 140%;
+	margin: 0 0 0.8em;
+	text-transform: uppercase;
+	color: #BC1B39;
+	font-weight: 400;
 }
 
-.big-text {
-  vertical-align:top;
+/* Experience items */
+.item {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: 1px solid #F2EBEC;
 }
 
-.content-text ul {
-  padding:0;
-  margin:0;
-  margin-top:0.15em;
-  
-  width:85%;
-  margin-left:1.5em;
+.item:last-child {
+	border-bottom: none;
 }
 
-.content-text ul:last-child {
-  margin-bottom:0.5em;
-}
 
-.content-text ul li {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  
-  display:inline-block;
-  
+.item header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
 }
 
-.content-text ul li:first-child {
-  width:35%;
-  
-  color: #424242;
-  
-  font-weight:600;
+.item header h3 {
+	margin: 0.2em 0 0.2em 0;
+	display: inline-block;
+	font-weight: 600;
 }
 
-.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
-  text-decoration: none;
-  color: #0277bd;
+.item header a {
+	display: inline-block;
 }
 
-.content-text ul li a:hover {
-  color:#4fc3f7;
+.item .dates {
+	text-align: right;
+	white-space: nowrap;
 }
 
-.work-listing p {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  
-  color: #424242;
-  
-  margin-left:2em;
-  margin-top:0.45em;
-  margin-bottom: 0.45em;
+.item .position {
+	font-weight: 600;
+	font-size: 100%;
+	margin: 0.2em 1em 0.2em 0;
 }
 
-div.content-text.work-listing.education-listing > p:nth-child(2) {
-  margin-top:0.25em;
+.item .startDate,
+.item .endDate {
+	color: #6B6B6B;
 }
 
-.work-listing .highlight {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  font-weight:400;
-  
-  color: #424242;
-  
-  margin-left:3.25em;
-  
-  list-style-type: disc;
-  list-style-position: inside;
-  display: list-item;
-  
+.item .highlights {
+	list-style: square;
+	font-size: 90%;
 }
 
-.education-listing > .heading {
-  font-weight:600;
-  
-  margin-top:0.75em;
-  margin-left:2em;
+/* skills */
+#skills .item {
+	margin: 0.5em 0;
+	padding: 0 0 0.5em;
+	font-size: 90%;
 }
 
-.education-listing > .highlight {
-  margin-left:3.25em;
+#skills .item .name {
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0 1em 0 0;
+	width: 23%;
+	vertical-align: top;
 }
 
-.highlight {
-  transition: border .33s ease-in;
+#skills .item .keywords {
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
 }
 
-.profiles-listing ul li, .profiles-listing ul li:first-child {
-  width:32%;
-  font-weight: normal;
+/* earlier experience */
+.earlier-experience {
+	margin: 0.5em 0 1em;
 }
 
-.work-content, .education-content {
-  padding-top: .75em;
-  page-break-inside: avoid;
+.earlier-experience .item {
+	margin: 0 0 0.5em;
+	padding: 0 0 0.5em;
+	font-size: 90%;
 }
 
-section.content.education-content > div > div.content-cat {
-  vertical-align: top;
+.earlier-experience .item .summary {
+	margin: 0.2em 0 0;
 }
 
-div.content-text.skills-listing > p {
-  font-family: "Open Sans";
-  font-size:0.7em;
-  font-weight:400;
-
-  margin-left: 2em;
-  margin-top: 0.45em;
-  margin-bottom: 0.45em;
+.earlier-experience .item .summary p {
+	margin: 0;
+	display: inline;
 }
 
-div.content-text.skills-listing > p > {
-  color:#212121;
+.page-header {
+	display: block;
+	font-size: 140%;
+	font-weight: 600;
+	margin: 0 0 0.5em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #ddd;
 }
-
-@media screen and (max-width: 600px) {
-  body, html {
-    padding-top: 30px;
-  }
 
-  .paper {
-    width:95%;
-  }
-
-  .row div {
-    display: block;
-  }
+.page-break {
+	display: block;
+	page-break-after: always;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
 
-  .content-cat {
-    width: 100%;
-  }
 
-  .content-text ul li {
-    width: 100%;
-  }
 
-  .content-text ul li:first-child {
-    width: 100%;
-  }
-  
-  .education-listing > .highlight {
-    margin-left: 30px;
-  }
-}
-</style>
-  <style media="print">
-body, html {
-  background-color: white;
-  padding-top: 1.5em;
-  font-size: 104%;
+/* education */
+#education {
+	margin: 0.5em 0 1em;
 }
 
-.paper {
-  width:100%;
-  border: 0;
-
-  padding-top: 0;
+#education .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 32%;
+	border-bottom: 0;
+	margin-bottom: 0.3em;
+	font-size: 85%;
 }
 
-header p {
-  font-size: 1.3em;
+#education .item header h3.name {
+	font-size: 100%;
+	margin: 0 0 0.2em 0;
 }
 
-.subtitle {
-  font-size: 0.7em;
+#education .item .qualification {
+	font-size: 95%;
 }
 
-.header-pic {
-  float:left;
+#education .item .dates,
+#education .item .endDate {
+	font-size: 90%;
+	color: #888;
 }
 
-.profiles {
-  display:none;
+/* publications/presentations */
+#publications {
+	margin-top: 1em;
 }
 
-.content {
-  page-break-inside:avoid; 
-  page-break-after:auto;
+#publications .item {
+	margin: 0.3em 0;
+	padding: 0.3em 0;
+	font-size: 90%;
+	border-bottom: none;
 }
 
-.header-text {
-  float:left;
-  margin-top: -1.6em;
+#publications .pub-name {
+	font-weight: 600;
 }
 
-.content-wrapper > .content:first-child {
-  padding-top: 2em;
+#publications .pub-publisher {
+	color: #555;
 }
 
-.content:last-child {
-  padding-bottom: 0;
+#publications .pub-date {
+	color: #888;
 }
 
-.content-cat {
-  width:33%;
-  color:black;
-  text-align: left;
-}
+/* Print styles */
+@media print {
+	body {
+		font-size: 11px;
+		margin: 0;
+	}
 
-.content-cat p {
-  font-size:0.6em;
-  font-weight: 600;
-}
+	#resume {
+		margin: 0.5em 1em;
+		max-width: none;
+	}
 
-header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
-  color:black;
-}
+	section {
+		margin: 0.5em 0 1em;
+	}
 
-.content-text.skills-listing > ul > li span, .subtitle {
-  color:#212121;
-}
+	.heading header h1 {
+		font-size: 160%;
+		margin: 0.1em 0;
+	}
 
-.content-text ul:last-child {
-  margin-bottom: 0.25em;
-}
+	.heading header h2.label {
+		font-size: 100%;
+		margin: 0 0 0.3em;
+	}
 
-.content-text ul li:first-child {
-  width:50%;
-}
+	section h2 {
+		font-size: 120%;
+		margin: 0 0 0.5em;
+	}
 
-.profiles-listing ul li:first-child {
-  width:32%;
-}
+	.item {
+		margin: 0 0 0.5em;
+		padding: 0 0 0.5em;
+	}
 
-div.content-text.skills-listing > ul > li {
-  width:33%;
-}
+	.item .highlights {
+		font-size: 85%;
+		margin-top: 0.3em;
+	}
 
-.work-listing p {
-  margin-bottom: 0.1em;
-}
+	.item .highlights li {
+		margin-bottom: 0.2em;
+	}
 
-div.content-text.skills-listing > ul > li > p {
-  margin-top: 0.4em;
-  margin-bottom: 0.5em;
-}
+	#skills .item {
+		margin: 0.3em 0;
+		padding: 0 0 0.3em;
+		font-size: 85%;
+	}
 
-div.content-text.skills-listing > ul > li {
-  padding-left: 1.5em;
-}
+	#education .item {
+		margin-bottom: 0.3em;
+	}
 
-div.content-text.skills-listing > ul > li:first-child {
-  padding-left: 2em;
-}
+	#projects .item {
+		font-size: 85%;
+	}
 
-.note {
-  display:none;
-}
+	a {
+		color: #000;
+	}
 
-.content-text:hover {
-  border-left:1px solid #eeeeee;
-}
+	/* Earlier Experience section starts on page 2 */
+	.earlier-experience {
+		margin-top: 0;
+	}
 
-.content-text ul li a:hover {
-  color:#4fc3f7;
-}
+	.earlier-experience .item {
+		margin: 0 0 0.3em;
+		padding: 0 0 0.3em;
+		font-size: 85%;
+	}
 
-.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
-  border-left:1px solid #eeeeee;
+	#publications {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
 }
 
-.big-text {
-  padding-top: 0;
-}
-</style>
-</head>
-<body>
-  <div class="resume-wrapper">
-    <article class="paper">
-        <header>
-          <div class="header-content">
-            <div class="header-text">
-              <p>
-                Nathan Storey
-              </p>
-              <p class="subtitle">Director of Data Governance • Civic Technologist</p>
-            </div>
-          </div>
-        </header>
-        <div class="content-wrapper">
-          <!-- CONTACT -->
-          <section class="content">
-            <div class="row">
-              <div class="content-cat">
-                Contact
-              </div>
-              <div class="content-text">
-              </div>
-            </div>
-          </section>
+	</style>
+	<style media="print">
+		body { font-size: 12px; }
+	</style>
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+	</head>
+	<body>
 
-              <section class="content">
-                <div class="row">
-                  <div class="content-cat">
-                    Location
-                  </div>
-                  <div class="content-text">
-                      <ul>
-                        <li>Region</li>
-                        <li>NY</li>
-                      </ul>
-                  </div>
-                </div>
-              </section>
+	<div id="resume">
 
-          <section class="content">
-            <div class="row">
-              <div class="content-cat">
-                Professional Skills Summary
-              </div>
-              <div class="content-text skills-listing">
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Subject Matter Expertise:
-                        </strong>
-                    </span>
-                      Technology, Operations, Social Services, Housing, Economic Development
-                  </p>
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Other Expertise:
-                        </strong>
-                    </span>
-                      Open Data &amp; Data Governance, Metadata Catalogs (DCAT/DCAT‑US), Cross‑agency Analytics &amp; Data Integration, Procurement &amp; Contracting Transparency (OCDS/PASSPort), AI governance &amp; adoption
-                  </p>
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Skills:
-                        </strong>
-                    </span>
-                      Program &amp; Project Management, Technology &amp; Data, Policy &amp; Analysis, Operations &amp; Administration, Community &amp; Stakeholder Engagement, Communications &amp; Digital
-                  </p>
-                  <p>
-                    <span class="name">
-                        <strong>
-                          Tools &amp; Methods:
-                        </strong>
-                    </span>
-                      Python, SQL, Socrata/SODA, QGIS/ArcGIS, Git/GitHub, Jupyter/CSV/JSON ETL, HTML/CSS/JS, Airtable, Product Discovery/Delivery, ORID facilitation
-                  </p>
-              </div>
-            </div>
-          </section>
-
-
-        
-                <section class="content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                        Work  Experience
-                          <p>2024 to Present</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Director of Data Governance:</strong>
-                        </p>
-                        <p>Lead citywide data governance initiatives, standards, and open data/catalog modernization.</p>
-                          <p class="highlight">Published the NYC Agencies &amp; Governance Organizations (NYC‑GO) dataset powering the Agency Directory on NYC.gov.</p>
-                          <p class="highlight">Lead MetaCat: defined asset types/fields aligned to DCAT‑US; drafted contribution workflows for citywide adoption.</p>
-                          <p class="highlight">Co‑steward NYC Open Data policy, quality, and release pipelines; advanced documentation and standards adoption.</p>
-                          <p class="highlight">Prototyped GitHub‑first docs and the NYC Open Data MCP to accelerate documentation and developer workflows.</p>
-                          <p class="highlight">Co‑led the Data Asset Working Group (DAWG); authored citywide guidance and strategy artifacts.</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2018 to 2023</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Executive Director of Data &amp; Analytics; Founding Director, Street Homeless Solutions Lab:</strong>
-                        </p>
-                        <p>Built delivery‑oriented analytics/product capacity for street homelessness services.</p>
-                          <p class="highlight">Established a product &amp; service design team; secured funding and executive sponsorship.</p>
-                          <p class="highlight">Implemented policy co‑creation (ORID) across hundreds of stakeholders to standardize practice.</p>
-                          <p class="highlight">Built the agency’s first unified client list to streamline reporting and enable usage‑pattern research.</p>
-                          <p class="highlight">Audited reporting and delivered prioritized improvements adopted by DHS leadership.</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2016 to 2018</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Senior Project Specialist:</strong>
-                        </p>
-                        <p>Product lead for StreetSmart and public HOME‑STAT dashboards.</p>
-                          <p class="highlight">Embedded user‑centered design and a dedicated product manager role into DHS IT for the first time.</p>
-                          <p class="highlight">Launched public HOME‑STAT dashboards and standardized cross‑provider KPIs with multiple agencies.</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2015 to 2016</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Data Analyst:</strong>
-                        </p>
-                          <p class="highlight">Designed executive reporting for HRA, the Mayor’s Office, and City Council; consolidated indicators across systems.</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2013 to 2014</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Product Manager:</strong>
-                        </p>
-                          <p class="highlight">Designed UX for NYCpedia and CivicDashboards; developed geospatial databases from multiple sources.</p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2011 to 2013</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Project Manager:</strong>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2011 to 2011</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Project Manager:</strong>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content work-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                          <p>2009 to 2010</p>
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p>
-                            <strong>Digital Media Fellow:</strong>
-                        </p>
-                          <p class="highlight">Built digital storytelling and social strategy; secured a $25,000 grant.</p>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                        Education
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p style="margin-top:0;" class="heading">Hunter College (CUNY)</p>
-                        <p class="highlight">
-                          M.U.P.:
-                          <i>Urban Planning </i>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content education-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p style="margin-top:0;" class="heading">Wayne State University</p>
-                        <p class="highlight">
-                          B.A.:
-                          <i>Media Arts &amp; Studies </i>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-                <section class="content education-content">
-                  <div class="row">
-                    <div class="content-cat big-text">
-                    </div>
-                    <div class="content-text work-listing education-listing">
-                          <p style="margin-top:0;" class="heading">NYU Tisch School of the Arts</p>
-                        <p class="highlight">
-                          Non‑degree:
-                          <i>Film &amp; TV coursework </i>
-                        </p>
-                    </div>
-                  </div>
-                </section>
-
-
-
-
-
-
-            <!-- PROFILES -->
-              <section class="content profiles">
-                <div class="row">
-                  <div class="content-cat">
-                    Profiles
-                  </div>
-                  <div class="content-text profiles-listing">
-                    <ul>
-                          <li>
-                            <a href="https://www.linkedin.com/in/nathanpstorey" target="_blank">
-                              LinkedIn
-                            </a>
-                          </li>
-                          <li>
-                            <a href="https://github.com/npstorey" target="_blank">
-                              GitHub
-                            </a>
-                          </li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-
-        </div>
-    </article>
-  </div>
-</body>
+	<section class="heading">
+		<header>
+			<h1>Nathan Storey</h1>
+			<h2 class="label">Director of Data Governance</h2>
+			<div class="contact">
+				<span class="detail location">
+					Brooklyn, NY
+				</span>
+				<span class="detail">
+					<a href="https://nathanstorey.com">https://nathanstorey.com</a>
+				</span>
+				<span class="detail profile">
+					LinkedIn: <a href="https://www.linkedin.com/in/npstorey">npstorey</a>
+				</span>
+				<span class="detail profile">
+					GitHub: <a href="https://github.com/npstorey">npstorey</a>
+				</span>
+			</div>
+		</header>
+
+
+		<p class="summary"><p>Data governance and digital services leader committed to making government work better for all New Yorkers, with 10+ years in NYC government. Built the City's first standardized open dataset of NYC agencies, now powering the NYC.gov Agency Directory. At the Department of Homeless Services, delivered street homelessness products (HOME-STAT, StreetSmart) and drove racial equity analysis that secured hundreds of housing placements.</p></p>
+
+	</section>
+
+	<section class="experience">
+		<h2>Experience</h2>
+		<section class="item">
+			<header>
+					<h3 class="name">NYC Office of Technology &amp; Innovation (OTI) - Office of Data &amp; Analytics (ODA)</h3>
+				<span class="dates">
+					<span class="startDate">
+						Feb 2024
+					</span>
+					<span class="endDate">
+						- Present
+					</span>
+				</span>
+			</header>
+			<span class="position">
+				Director of Data Governance
+			</span>
+
+			<ul class="highlights">
+				<li>Delivered NYC Agency and Governance Organizations (303 entities), the City&#x27;s first open, standardized agency reference, democratizing access to government structure by consolidating 8 fragmented lists into a public resource now powering the NYC.gov Agency Directory.</li>
+				<li>Co-led MetaCat development: internal metadata catalog improving discoverability and usability of non-public datasets, with 325+ data assets from 21 agencies.</li>
+				<li>Trained 400+ city staff across 15 agencies on WorkerConnect, NYC&#x27;s cross-agency data-sharing platform enabling caseworkers to better serve vulnerable New Yorkers.</li>
+				<li>Built open-source tools enabling LLMs to query NYC Open Data APIs; delivered 4 presentations on responsible AI use for government data through the Open Data Ambassador program.</li>
+				<li>Drove data standards working groups including the Data Asset Working Group; created internal collaboration website (nycdata.nycnet) consolidating 35 resources for the initiative.</li>
+			</ul>
+		</section>
+		<section class="item">
+			<header>
+					<h3 class="name">NYC Department of Homeless Services</h3>
+				<span class="dates">
+					<span class="startDate">
+						Jan 2018
+					</span>
+					<span class="endDate">
+						- Feb 2024
+					</span>
+				</span>
+			</header>
+			<span class="position">
+				Executive Director of Data &amp; Analytics; Founding Director, Street Homeless Solutions Lab
+			</span>
+
+			<ul class="highlights">
+				<li>Founded Street Homeless Solutions Lab, a 3-person product and service design team; secured funding and executive sponsorship to center user needs in technology decisions.</li>
+				<li>Designed and implemented participatory policy co-creation using Polis and vTaiwan-inspired methods, engaging 300 frontline and executive staff across 17 programs in consensus-driven practice redesign - among the first vTaiwan-inspired processes in U.S. city government.</li>
+				<li>Directed cross-system data integration for street homeless clients, including racial equity analysis exposing disparities in placements; produced evidence that secured 700-800 additional supportive housing units.</li>
+			</ul>
+		</section>
+	</section>
+
+	<div class="page-break"></div>
+	<section class="earlier-experience">
+		<div class="page-header">Nathan Storey</div>
+		<h2>Earlier Experience</h2>
+		<section class="item">
+			<header>
+					<h3 class="name">NYC Mayor&#x27;s Office of Operations</h3>
+				<span class="dates">
+					<span class="startDate">
+						Jan 2016
+					</span>
+					<span class="endDate">
+						- Jan 2018
+					</span>
+				</span>
+			</header>
+			<span class="position">
+				Senior Project Specialist
+			</span>
+
+			<div class="summary">
+				<p>Product lead for StreetSmart and HOME-STAT dashboards; embedded user-centered design into Homeless Services IT.</p>
+			</div>
+		</section>
+		<section class="item">
+			<header>
+					<h3 class="name">IDNYC (Human Resources Administration)</h3>
+				<span class="dates">
+					<span class="startDate">
+						Jan 2015
+					</span>
+					<span class="endDate">
+						- Jan 2016
+					</span>
+				</span>
+			</header>
+			<span class="position">
+				Data Analyst
+			</span>
+
+			<div class="summary">
+				<p>Designed executive reporting for Human Resources Administration, the Mayor&#x27;s Office, and City Council.</p>
+			</div>
+		</section>
+		<section class="item">
+			<header>
+					<h3 class="name">Ontodia</h3>
+				<span class="dates">
+					<span class="startDate">
+						Jan 2013
+					</span>
+					<span class="endDate">
+						- Jan 2014
+					</span>
+				</span>
+			</header>
+			<span class="position">
+				Product Manager
+			</span>
+
+			<div class="summary">
+				<p>Designed UX for NYCpedia and CivicDashboards; developed geospatial databases.</p>
+			</div>
+		</section>
+	</section>
+
+	<section id="skills">
+		<h2>Skills</h2>
+		<div class="item">
+			<div class="name">
+				Expertise
+			</div>
+			<div class="keywords">
+					Data Governance &amp; Strategy,
+					Open Data,
+					Open Government,
+					Digital Service Delivery,
+					AI Literacy &amp; Integration,
+					Interagency Coordination,
+					Metadata Catalogs,
+					Data Sharing Agreements,
+					Data Privacy
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Leadership
+			</div>
+			<div class="keywords">
+					Program Management,
+					Policy Analysis,
+					Human-Centered Design,
+					Change Management,
+					Training &amp; Capacity Building,
+					Stakeholder Engagement
+			</div>
+		</div>
+		<div class="item">
+			<div class="name">
+				Tools
+			</div>
+			<div class="keywords">
+					Python (pandas),
+					SQL,
+					QGIS/ArcGIS,
+					Socrata Open Data (SODA API),
+					OpenAI / Anthropic APIs,
+					Git/GitHub (GitHub Actions),
+					HTML/CSS/JS,
+					Airtable
+			</div>
+		</div>
+	</section>
+
+	<section id="education">
+		<h2>Education</h2>
+		<div class="item">
+			<header>
+					<h3 class="name">Hunter College (CUNY)</h3>
+			</header>
+
+			<div class="qualification">
+				<span class="studyType">
+					M.U.P.
+				</span>
+
+				<span class="area">
+					- Urban Planning
+				</span>
+
+				<span class="endDate">
+					(May 2013)
+				</span>
+			</div>
+
+		</div>
+		<div class="item">
+			<header>
+					<h3 class="name">Wayne State University</h3>
+			</header>
+
+			<div class="qualification">
+				<span class="studyType">
+					B.A.
+				</span>
+
+				<span class="area">
+					- Media Arts &amp; Studies
+				</span>
+
+				<span class="endDate">
+					(Jun 2006)
+				</span>
+			</div>
+
+		</div>
+		<div class="item">
+			<header>
+					<h3 class="name">NYU Tisch School of the Arts</h3>
+			</header>
+
+			<div class="qualification">
+
+				<span class="area">
+					Film &amp; TV
+				</span>
+
+				<span class="dates">
+					(Jan 2000 - Jan 2003)
+				</span>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="publications">
+		<h2>Selected Talks & Civic Engagement</h2>
+		<div class="item">
+			<span class="pub-name">NYC Agency and Governance Organizations Lunch and Learn</span>
+			<span class="pub-publisher"> - MTA Data Team</span>
+			<span class="pub-date"> (2025)</span>
+		</div>
+		<div class="item">
+			<span class="pub-name">Using ChatGPT to Explore NYC Open Data</span>
+			<span class="pub-publisher"> - School of Data conference</span>
+			<span class="pub-date"> (2024)</span>
+		</div>
+		<div class="item">
+			<span class="pub-name">Open Data Ambassador presentation</span>
+			<span class="pub-publisher"> - Brooklyn Borough President staff</span>
+			<span class="pub-date"> (2022)</span>
+		</div>
+		<div class="item">
+			<span class="pub-name">NYC Street Homeless Solutions Policy Co-Creation</span>
+			<span class="pub-publisher"> - Participedia case study</span>
+			<span class="pub-date"> (2019)</span>
+		</div>
+		<div class="item">
+			<span class="pub-name">vTaiwan Open Consultation &amp; Participation Officers Training</span>
+			<span class="pub-publisher"> - Co-organizer</span>
+			<span class="pub-date"> (2018)</span>
+		</div>
+		<div class="item">
+			<span class="pub-name">Fearless Cities North America conference</span>
+			<span class="pub-publisher"> - Panel moderator and steering committee</span>
+			<span class="pub-date"> (2018)</span>
+		</div>
+	</section>
+
+
+	</div>
+
+	</body>
 </html>
