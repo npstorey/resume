@@ -4,13 +4,26 @@
   "private": true,
   "description": "Nathan Storey resume using JSON Resume schema, built to HTML/PDF and published via GitHub Pages.",
   "scripts": {
-    "dev": "resume serve --theme paper --resume src/resume.json",
-    "build:html": "mkdir -p docs && resume export docs/index.html --theme paper --resume src/resume.json",
-    "build:pdf": "mkdir -p docs && resume export docs/Nathan_Storey_Resume.pdf --format pdf --theme paper --resume src/resume.json",
-    "build": "npm run build:html && npm run build:pdf"
+    "dev": "resume serve --theme ./themes/jsonresume-theme-custom --resume src/resume.json",
+    "build:html": "mkdir -p docs && resume export docs/index.html --theme ./themes/jsonresume-theme-custom --resume src/resume.json",
+    "build:pdf": "mkdir -p docs && resume export docs/Nathan_Storey_Resume.pdf --format pdf --theme ./themes/jsonresume-theme-custom --resume src/resume.json",
+    "build": "npm run build:html && npm run build:pdf",
+    "build:private": "node scripts/build-private.js && mkdir -p docs && resume export docs/Nathan_Storey_Resume_Private.pdf --format pdf --theme ./themes/jsonresume-theme-custom --resume src/resume.private.json"
   },
   "dependencies": {
-    "resume-cli": "^3.0.0",
-    "jsonresume-theme-paper": "^0.5.0"
+    "handlebars": "^4.7.8",
+    "jsonresume-theme-actual": "^0.2.2",
+    "jsonresume-theme-class": "^0.1.2",
+    "jsonresume-theme-elegant": "^1.16.1",
+    "jsonresume-theme-even": "^0.26.1",
+    "jsonresume-theme-flat": "^0.3.7",
+    "jsonresume-theme-kendall": "^0.2.0",
+    "jsonresume-theme-macchiato": "^1.1.0",
+    "jsonresume-theme-onepage": "^0.0.3",
+    "jsonresume-theme-paper": "^0.5.0",
+    "jsonresume-theme-short": "^0.1.7",
+    "jsonresume-theme-spartan": "^0.3.0",
+    "jsonresume-theme-stackoverflow": "^2.1.0",
+    "resume-cli": "^3.0.0"
   }
 }

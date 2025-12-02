@@ -1,3 +1,10 @@
 node_modules/
 .DS_Store
 
+.resume-improvements.md
+.resume-feedback-v2.md
+
+# Private resume with contact info
+src/resume.private.json
+src/contact.private.json
+docs/Nathan_Storey_Resume_Private.pdf

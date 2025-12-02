@@ -1,0 +1,332 @@
+body {
+	background: #fff;
+	font: 16px 'Open Sans', Helvetica, Arial, sans-serif;
+	font-feature-settings: "liga" 0, "clig" 0;
+	font-variant-ligatures: none;
+	line-height: 1.4;
+	margin: 0;
+}
+em {
+	color: #999;
+}
+p {
+	line-height: 1.6;
+	font-size: 90%;
+}
+
+a {
+	color: #2C85B1;
+	text-decoration: none;
+	font-weight: 400;
+}
+ul {
+	margin-bottom: 0;
+}
+section {
+	margin: 1em 0 2em;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+#resume {
+	margin: 2em 2em 2em 2.5em;
+	max-width: 760px;
+}
+
+/* Resume heading */
+.heading header {
+
+}
+
+.heading header h1 {
+	font-size: 180%;
+	margin: 0.2em 0 0.1em;
+	font-weight: 600;
+}
+
+.heading header h2.label {
+	font-size: 110%;
+	margin: 0 0 0.5em;
+	font-weight: 400;
+	color: #555;
+}
+
+.heading header .contact {
+	margin-bottom: 0.5em;
+}
+
+.heading header .contact .detail {
+	margin: 0 1em 0 0;
+	font-size: 90%;
+}
+
+.heading header .contact .location {
+	color: #333;
+}
+
+.heading .summary {
+	margin: 0.5em 0;
+}
+
+.profile {
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+
+.profile strong,
+.profile span {
+	display: inline-block;
+	margin: 0 1em 0 0;
+}
+/* section / line breaks */
+section h2 {
+	font-size: 140%;
+	margin: 0 0 0.8em;
+	text-transform: uppercase;
+	color: #BC1B39;
+	font-weight: 400;
+}
+
+/* Experience items */
+.item {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+	border-bottom: 1px solid #F2EBEC;
+}
+
+.item:last-child {
+	border-bottom: none;
+}
+
+
+.item header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.item header h3 {
+	margin: 0.2em 0 0.2em 0;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.item header a {
+	display: inline-block;
+}
+
+.item .dates {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.item .position {
+	font-weight: 600;
+	font-size: 100%;
+	margin: 0.2em 1em 0.2em 0;
+}
+
+.item .startDate,
+.item .endDate {
+	color: #6B6B6B;
+}
+
+.item .highlights {
+	list-style: square;
+	font-size: 90%;
+}
+
+/* skills */
+#skills .item {
+	margin: 0.5em 0;
+	padding: 0 0 0.5em;
+	font-size: 90%;
+}
+
+#skills .item .name {
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0 1em 0 0;
+	width: 23%;
+	vertical-align: top;
+}
+
+#skills .item .keywords {
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
+
+/* earlier experience */
+.earlier-experience {
+	margin: 0.5em 0 1em;
+}
+
+.earlier-experience .item {
+	margin: 0 0 0.5em;
+	padding: 0 0 0.5em;
+	font-size: 90%;
+}
+
+.earlier-experience .item .summary {
+	margin: 0.2em 0 0;
+}
+
+.earlier-experience .item .summary p {
+	margin: 0;
+	display: inline;
+}
+
+.page-header {
+	display: block;
+	font-size: 140%;
+	font-weight: 600;
+	margin: 0 0 0.5em;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #ddd;
+}
+
+.page-break {
+	display: block;
+	page-break-after: always;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* education */
+#education {
+	margin: 0.5em 0 1em;
+}
+
+#education .item {
+	display: inline-block;
+	vertical-align: top;
+	width: 32%;
+	border-bottom: 0;
+	margin-bottom: 0.3em;
+	font-size: 85%;
+}
+
+#education .item header h3.name {
+	font-size: 100%;
+	margin: 0 0 0.2em 0;
+}
+
+#education .item .qualification {
+	font-size: 95%;
+}
+
+#education .item .dates,
+#education .item .endDate {
+	font-size: 90%;
+	color: #888;
+}
+
+/* publications/presentations */
+#publications {
+	margin-top: 1em;
+}
+
+#publications .item {
+	margin: 0.3em 0;
+	padding: 0.3em 0;
+	font-size: 90%;
+	border-bottom: none;
+}
+
+#publications .pub-name {
+	font-weight: 600;
+}
+
+#publications .pub-publisher {
+	color: #555;
+}
+
+#publications .pub-date {
+	color: #888;
+}
+
+/* Print styles */
+@media print {
+	body {
+		font-size: 11px;
+		margin: 0;
+	}
+
+	#resume {
+		margin: 0.5em 1em;
+		max-width: none;
+	}
+
+	section {
+		margin: 0.5em 0 1em;
+	}
+
+	.heading header h1 {
+		font-size: 160%;
+		margin: 0.1em 0;
+	}
+
+	.heading header h2.label {
+		font-size: 100%;
+		margin: 0 0 0.3em;
+	}
+
+	section h2 {
+		font-size: 120%;
+		margin: 0 0 0.5em;
+	}
+
+	.item {
+		margin: 0 0 0.5em;
+		padding: 0 0 0.5em;
+	}
+
+	.item .highlights {
+		font-size: 85%;
+		margin-top: 0.3em;
+	}
+
+	.item .highlights li {
+		margin-bottom: 0.2em;
+	}
+
+	#skills .item {
+		margin: 0.3em 0;
+		padding: 0 0 0.3em;
+		font-size: 85%;
+	}
+
+	#education .item {
+		margin-bottom: 0.3em;
+	}
+
+	#projects .item {
+		font-size: 85%;
+	}
+
+	a {
+		color: #000;
+	}
+
+	/* Earlier Experience section starts on page 2 */
+	.earlier-experience {
+		margin-top: 0;
+	}
+
+	.earlier-experience .item {
+		margin: 0 0 0.3em;
+		padding: 0 0 0.3em;
+		font-size: 85%;
+	}
+
+	#publications {
+		page-break-inside: avoid;
+		page-break-after: avoid;
+	}
+}
