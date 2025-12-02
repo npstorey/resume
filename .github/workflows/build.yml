@@ -18,6 +18,7 @@ jobs:
           node-version: '20'
       - run: npm ci || npm install
       - run: npm run build
+
       - name: Commit built assets
         run: |
           git config user.name "github-actions[bot]"
@@ -26,3 +27,15 @@ jobs:
           git commit -m "Build resume assets [skip ci]" || echo "No changes"
           git push
 
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Resume v${{ github.run_number }}
+          body: |
+            Automated release of Nathan Storey's resume.
+
+            - [View HTML](https://npstorey.github.io/resume/)
+            - Download the PDF below
+          files: docs/Nathan_Storey_Resume.pdf
+          make_latest: true
